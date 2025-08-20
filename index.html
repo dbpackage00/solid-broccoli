@@ -5,18 +5,14 @@
   <title>동방포장입니다.</title>
   <style>
     
+   /* 본문이 바 밑에서 시작하도록 여백 추가 */
    body {
       margin: 0;   /* 브라우저 기본 여백 제거 */
+      scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
    }   
 
     /* 상단 바 스타일 */
     .navbar {
-      /* 상단에 바 고정
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-         상단에 바 고정 */
 
       position: relative;
       top: 0;
@@ -48,18 +44,12 @@
       color: yellow;  /* 강조 효과 */
     }
 */
-
-    /* 본문이 바 밑에서 시작하도록 여백 추가 */
-    body {
-      margin: 0;
-      /* padding-top: 60px;  */
-      scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
-    }
-
+  
     /* 섹션 스타일 (보기 좋게 구분용) */
     section {
-      height: 600px;   /* 스크롤 내려도 구분되도록 */
-      padding: 20px;
+      
+         padding: 20px;
+
     }
     #home { background: #f0f0f0; }
     #about { background: #ddd; }
@@ -76,7 +66,13 @@
     
   </div>
 
+    
+
   <!-- 본문 -->
+
+    <h1>Hello World!</h1>
+    <p>동방포장입니다✋</p>
+
   <section id="home">
     <h1>홈 화면</h1>
     <p>여기가 첫 화면입니다.</p>
@@ -96,14 +92,3 @@
 </html>
 
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>동방포장</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <p>동방포장입니다✋</p>
-  </body>
-</html>
