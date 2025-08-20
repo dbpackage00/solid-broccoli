@@ -4,15 +4,32 @@
   <meta charset="utf-8">
   <title>동방포장입니다.</title>
   <style>
+    
+   body {
+      margin: 0;   /* 브라우저 기본 여백 제거 */
+   }   
+
     /* 상단 바 스타일 */
     .navbar {
+      /* 상단에 바 고정
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
+         상단에 바 고정 */
+
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
       background-color: black;
-      padding: 15px;
-      text-align: center;
+      padding: 8px;
+      
+      text-align: left;
+      padding-left: 150px; /* 왼쪽에서 150px 띄우기 */
+      
+      border-top-left-radius: 20px;   /* 왼쪽 아래 둥글게 */
+      border-top-right-radius: 20px;  /* 오른쪽 아래 둥글게 */
       z-index: 1000;
     }
 
@@ -21,19 +38,21 @@
       color: white;          /* 흰색 글씨 */
       text-decoration: none; /* 밑줄 제거 */
       margin: 0 15px;        /* 메뉴 간격 */
-      font-size: 18px;
+      font-size: 13px;
       font-family: Arial, sans-serif;
     }
 
     /* 마우스를 올리면 글자 색 바뀜 */
+/*
     .navbar a:hover {
       color: yellow;  /* 강조 효과 */
     }
+*/
 
     /* 본문이 바 밑에서 시작하도록 여백 추가 */
     body {
       margin: 0;
-      padding-top: 60px;
+      /* padding-top: 60px;  */
       scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
     }
 
