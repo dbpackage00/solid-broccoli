@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
@@ -23,12 +24,11 @@
 
     .container {
       width: 100%;
-      max-width: 700px;
+      max-width: 720px;
       text-align: center;
-      padding: 60px 25px;
+      padding: 55px 25px;
     }
 
-    /* 회사명 */
     .company {
       font-size: 34px;
       font-weight: 700;
@@ -50,7 +50,6 @@
       margin: 0 auto 32px;
     }
 
-    /* 리뉴얼 안내 */
     h1 {
       font-size: 26px;
       font-weight: 500;
@@ -64,42 +63,50 @@
       margin: 0;
     }
 
-    /* 회사 정보 */
+    /* 회사정보 전체 영역 */
     .contact {
-      max-width: 560px;
+      width: fit-content;
+      max-width: 100%;
       margin: 42px auto 0;
-      padding-top: 30px;
+      padding: 30px 25px 0;
       border-top: 1px solid #e5e7eb;
-      text-align: center;
     }
 
+    /* 한 줄을 3칸으로 고정 */
     .contact-row {
-      margin-bottom: 17px;
-      text-align: center;
+      display: grid;
+      grid-template-columns: 25px 95px 1fr;
+      align-items: center;
+      column-gap: 8px;
+      margin-bottom: 16px;
       font-size: 14px;
       line-height: 1.6;
-      color: #666;
     }
 
     .icon {
-      display: inline-block;
-      margin-right: 7px;
+      text-align: center;
       font-size: 15px;
-      vertical-align: middle;
     }
 
     .label {
+      text-align: left;
       font-weight: 600;
       color: #142b4a;
-      margin-right: 7px;
+      white-space: nowrap;
     }
 
-    .contact a {
+    .value {
+      text-align: left;
+      color: #666;
+      white-space: nowrap;
+    }
+
+    .value a {
       color: #666;
       text-decoration: none;
     }
 
-    .contact a:hover {
+    .value a:hover {
       color: #142b4a;
       text-decoration: underline;
     }
@@ -113,7 +120,7 @@
 
     @media (max-width: 600px) {
       .container {
-        padding: 45px 20px;
+        padding: 40px 15px;
       }
 
       .company {
@@ -128,8 +135,19 @@
         font-size: 14px;
       }
 
+      .contact {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
       .contact-row {
-        font-size: 13px;
+        grid-template-columns: 22px 82px 1fr;
+        column-gap: 5px;
+        font-size: 12px;
+      }
+
+      .value {
+        white-space: normal;
       }
     }
   </style>
@@ -154,33 +172,39 @@
     <div class="contact">
 
       <div class="contact-row">
-        <span class="icon">📍</span>
-        <span class="label">본사 · 공장</span>
-        경기도 군포시 농심로47번길 7 (당정동)
+        <div class="icon">📍</div>
+        <div class="label">본사 · 공장</div>
+        <div class="value">경기도 군포시 농심로47번길 7 (당정동)</div>
       </div>
 
       <div class="contact-row">
-        <span class="icon">☎</span>
-        <span class="label">전화번호</span>
-        <a href="tel:0314539495">031-453-9495</a>
+        <div class="icon">☎</div>
+        <div class="label">전화번호</div>
+        <div class="value">
+          <a href="tel:0314539495">031-453-9495</a>
+        </div>
       </div>
 
       <div class="contact-row">
-        <span class="icon">📠</span>
-        <span class="label">팩스</span>
-        031-458-1347
+        <div class="icon">📠</div>
+        <div class="label">팩스</div>
+        <div class="value">031-458-1347</div>
       </div>
 
       <div class="contact-row">
-        <span class="icon">📱</span>
-        <span class="label">H.P</span>
-        <a href="tel:01092686268">010-9268-6268</a>
+        <div class="icon">📱</div>
+        <div class="label">H.P</div>
+        <div class="value">
+          <a href="tel:01092686268">010-9268-6268</a>
+        </div>
       </div>
 
       <div class="contact-row">
-        <span class="icon">✉</span>
-        <span class="label">이메일</span>
-        <a href="mailto:dbpackg00@daum.net">dbpackg00@daum.net</a>
+        <div class="icon">✉</div>
+        <div class="label">이메일</div>
+        <div class="value">
+          <a href="mailto:dbpackg00@daum.net">dbpackg00@daum.net</a>
+        </div>
       </div>
 
     </div>
