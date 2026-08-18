@@ -14,19 +14,50 @@
     body {
       margin: 0;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background: #ffffff;
       font-family: Arial, "Noto Sans KR", sans-serif;
       color: #142b4a;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* 하단 공장 사진 */
+    .factory-bg {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 42vh;
+      background-image: url('DbFactory_2.png');
+      background-size: cover;
+      background-position: center 58%;
+      background-repeat: no-repeat;
+      opacity: 0.16;
+      z-index: 0;
+    }
+
+    /* 사진 위쪽을 흰색으로 자연스럽게 페이드 */
+    .factory-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        rgba(255,255,255,0.95) 14%,
+        rgba(255,255,255,0.60) 42%,
+        rgba(255,255,255,0.12) 100%
+      );
     }
 
     .container {
+      position: relative;
+      z-index: 1;
       width: 100%;
       max-width: 720px;
+      margin: 0 auto;
       text-align: center;
-      padding: 55px 25px;
+      padding: 55px 25px 90px;
     }
 
     .company {
@@ -63,7 +94,6 @@
       margin: 0;
     }
 
-    /* 회사정보 전체 영역 */
     .contact {
       width: fit-content;
       max-width: 100%;
@@ -72,7 +102,6 @@
       border-top: 1px solid #e5e7eb;
     }
 
-    /* 한 줄을 3칸으로 고정 */
     .contact-row {
       display: grid;
       grid-template-columns: 25px 95px 1fr;
@@ -114,13 +143,18 @@
     .footer {
       margin-top: 42px;
       font-size: 11px;
-      color: #aaa;
+      color: #999;
       letter-spacing: 1px;
     }
 
     @media (max-width: 600px) {
+      .factory-bg {
+        height: 34vh;
+        background-position: center bottom;
+      }
+
       .container {
-        padding: 40px 15px;
+        padding: 40px 15px 70px;
       }
 
       .company {
@@ -154,6 +188,8 @@
 </head>
 
 <body>
+
+  <div class="factory-bg"></div>
 
   <div class="container">
 
