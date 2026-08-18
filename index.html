@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>동방포장 | DONGBANG PACKAGING</title>
 
   <style>
@@ -12,18 +13,20 @@
 
     body {
       margin: 0;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #ffffff;
-      font-family: Arial, sans-serif;
+      font-family: Arial, "Noto Sans KR", sans-serif;
       color: #142b4a;
     }
 
     .container {
+      width: 100%;
+      max-width: 650px;
       text-align: center;
-      padding: 40px 20px;
+      padding: 55px 25px;
     }
 
     .company {
@@ -37,20 +40,20 @@
       font-size: 13px;
       letter-spacing: 4px;
       color: #718096;
-      margin-bottom: 55px;
+      margin-bottom: 45px;
     }
 
     .line {
       width: 45px;
       height: 2px;
       background: #142b4a;
-      margin: 0 auto 35px;
+      margin: 0 auto 32px;
     }
 
     h1 {
       font-size: 26px;
       font-weight: 500;
-      margin: 0 0 18px;
+      margin: 0 0 16px;
     }
 
     .message {
@@ -60,11 +63,74 @@
       margin: 0;
     }
 
+    .contact {
+      margin: 45px auto 0;
+      padding-top: 30px;
+      border-top: 1px solid #e5e7eb;
+      max-width: 520px;
+      text-align: left;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      margin: 12px 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .icon {
+      width: 28px;
+      flex-shrink: 0;
+      font-size: 16px;
+      color: #142b4a;
+    }
+
+    .label {
+      font-weight: 600;
+      color: #142b4a;
+      margin-right: 7px;
+      white-space: nowrap;
+    }
+
+    .contact a {
+      color: #555;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      color: #142b4a;
+      text-decoration: underline;
+    }
+
     .footer {
-      margin-top: 70px;
-      font-size: 12px;
+      margin-top: 45px;
+      font-size: 11px;
       color: #aaa;
       letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 40px 22px;
+      }
+
+      .company {
+        font-size: 28px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      .message {
+        font-size: 14px;
+      }
+
+      .contact-row {
+        font-size: 13px;
+      }
     }
   </style>
 </head>
@@ -84,6 +150,50 @@
       보다 나은 서비스와 새로운 모습으로<br>
       곧 찾아뵙겠습니다.
     </p>
+
+    <div class="contact">
+
+      <div class="contact-row">
+        <div class="icon">📍</div>
+        <div>
+          <span class="label">본사 · 공장</span>
+          경기도 군포시 농심로47번길 7 (당정동)
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="icon">☎</div>
+        <div>
+          <span class="label">전화</span>
+          <a href="tel:0314539495">031-453-9495</a>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="icon">📠</div>
+        <div>
+          <span class="label">팩스</span>
+          031-458-1347
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="icon">📱</div>
+        <div>
+          <span class="label">H.P</span>
+          <a href="tel:01092686268">010-9268-6268</a>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="icon">✉</div>
+        <div>
+          <span class="label">이메일</span>
+          <a href="mailto:dbpackg00@daum.net">dbpackg00@daum.net</a>
+        </div>
+      </div>
+
+    </div>
 
     <div class="footer">
       © DONGBANG PACKAGING. ALL RIGHTS RESERVED.
